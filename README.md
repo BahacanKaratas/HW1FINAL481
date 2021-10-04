@@ -37,4 +37,7 @@ TESTS EXPLANATION:
 
 [![Build Status](https://app.travis-ci.com/BahacanKaratas/HW1FINAL481.svg?branch=main)](https://app.travis-ci.com/BahacanKaratas/HW1FINAL481)
 
+ORDER OF THE INPUTS ARE:
+-SIDE-SIDE-SIDE-ARRAYLIST OF CIRCUMFRENCES
+
 https://nameless-escarpment-76420.herokuapp.com/compute
