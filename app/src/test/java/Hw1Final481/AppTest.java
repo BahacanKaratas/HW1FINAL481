@@ -92,8 +92,4 @@ class AppTest {
         }
         assertFalse(App.isValid_WhatType_And_isLargeEnough(100, 2, 3,arrayx9));
     }
-
-    
-    
-
 }

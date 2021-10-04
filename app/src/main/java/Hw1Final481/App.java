@@ -90,20 +90,24 @@ public class App {
     }
     
     public static boolean isValid_WhatType_And_isLargeEnough(int a,int b,int c,ArrayList<Integer> circumfrences){
+        
+        System.out.println("--------------STARTING TEST---------------");
+       
 
         //STEP1: Check if the given sides is feasible. This means a side cannot be <=0
 
         if(a<=0 || b<=0 || c<=0){
           System.out.println("A given side cannot be equal or smaller than zero.");
-            System.out.println("");
+          System.out.println("--------------ENDING TEST-----------------");  
           return false;  
+
         }
 
         //STEP2: Check if the array is empty
 
         if(circumfrences.size()==0){
             System.out.println("Given circumfrences array is empty.");
-            System.out.println("");
+            System.out.println("--------------ENDING TEST-----------------");
             return false;
         } 
 
@@ -121,7 +125,7 @@ public class App {
         }
         if(count==1){
             System.out.println("A triangle cannot be formed with given sides.");
-            System.out.println("");
+            System.out.println("--------------ENDING TEST-----------------");
             return false;
         }
         else{
@@ -154,12 +158,12 @@ public class App {
             for(int i=0;i<circumfrences.size();i++){
                 if(circumfrences.get(i)>mainCircumfrence){
                     System.out.println("The triangle formed is NOT large enough to satisfy the needs.");
-                    System.out.println("");
+                    System.out.println("--------------ENDING TEST-----------------");
                     return false;
                 }
             }
             System.out.println("The triangle formed is large enough to satisfy the needs.");
-            System.out.println("");
+            System.out.println("--------------ENDING TEST-----------------");
             return true;
         }
 
