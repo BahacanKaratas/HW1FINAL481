@@ -6,9 +6,95 @@ package Hw1Final481;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+     //ALL TESTS INCLUDING CORNER CASES (TOTAL: 9 TESTS)
+
+    //TESTS OF INCORRECT INPUTS
+    public void testIfIncorrectSideParamters(){
+        int[] array={10,5,20};
+        ArrayList<Integer> arrayx=new ArrayList<>();;
+        for(int i=0;i<array.length;i++){
+            arrayx.add(array[i]);
+        }
+        assertFalse(App.isValid_WhatType_And_isLargeEnough(0, 3, 4,arrayx));
+    }
+    public void testIfEmptyArray(){
+        ArrayList<Integer> arrayx2=new ArrayList<>();
+        assertFalse(App.isValid_WhatType_And_isLargeEnough(10, 3, 4,arrayx2));
+       
+    }
+
+    //TESTS OF EQUILATERAL TRIANGLE
+    public void valid_equilateralTriangle_And_largeEnough(){
+        int[] array3={10,5,20};
+        ArrayList<Integer> arrayx3=new ArrayList<>();;
+        for(int i=0;i<array3.length;i++){
+            arrayx3.add(array3[i]);
+        }
+        assertTrue(App.isValid_WhatType_And_isLargeEnough(10, 10, 10,arrayx3));
+    }
+    public void valid_equilateralTriangle_And_notlargeEnough(){
+        int[] array4={10,5,20};
+        ArrayList<Integer> arrayx4=new ArrayList<>();;
+        for(int i=0;i<array4.length;i++){
+            arrayx4.add(array4[i]);
+        }
+        assertFalse(App.isValid_WhatType_And_isLargeEnough(5, 5, 5,arrayx4));
+    }
+
+    //TESTS OF ISOSCELES TRIANGLE
+    public void valid_isoscelesTriangle_And_largeEnough(){
+        int[] array5={10,5,13};
+        ArrayList<Integer> arrayx5=new ArrayList<>();;
+        for(int i=0;i<array5.length;i++){
+            arrayx5.add(array5[i]);
+        }
+        assertTrue(App.isValid_WhatType_And_isLargeEnough(5, 5, 4,arrayx5));
+    }
+    public void valid_isoscelesTriangle_And_notlargeEnough(){
+        int[] array6={10,5,20};
+        ArrayList<Integer> arrayx6=new ArrayList<>();;
+        for(int i=0;i<array6.length;i++){
+            arrayx6.add(array6[i]);
+        }
+        assertFalse(App.isValid_WhatType_And_isLargeEnough(5, 5, 4,arrayx6));
+    }
+
+    //TESTS OF SCALENE TRIANGLE
+    public void valid_scaleneTriangle_And_largeEnough(){
+        int[] array7={10,5,13};
+        ArrayList<Integer> arrayx7=new ArrayList<>();;
+        for(int i=0;i<array7.length;i++){
+            arrayx7.add(array7[i]);
+        }
+        assertTrue(App.isValid_WhatType_And_isLargeEnough(7, 12, 15,arrayx7));
+    }
+    public void valid_scaleneTriangle_And_notlargeEnough(){
+        int[] array8={50,5,20};
+        ArrayList<Integer> arrayx8=new ArrayList<>();;
+        for(int i=0;i<array8.length;i++){
+            arrayx8.add(array8[i]);
+        }
+        assertFalse(App.isValid_WhatType_And_isLargeEnough(7, 12, 15,arrayx8));
+    }
+
+    //TEST OF A NOT VALID TRIANGLE
+    public void notValidTriangle(){
+        int[] array9={50,5,20};
+        ArrayList<Integer> arrayx9=new ArrayList<>();;
+        for(int i=0;i<array9.length;i++){
+            arrayx9.add(array9[i]);
+        }
+        assertFalse(App.isValid_WhatType_And_isLargeEnough(100, 2, 3,arrayx9));
+    }
+
+    
+    
+
 }
