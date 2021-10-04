@@ -8,19 +8,16 @@ import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.post;
 
-import java.lang.System.Logger;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.LogManager;
-
-import javax.sound.sampled.Port;
-
-import static spark.Spark.port;
 
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import static spark.Spark.port;
 
 public class App {
     public String getGreeting() {
