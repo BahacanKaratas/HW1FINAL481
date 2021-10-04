@@ -14,6 +14,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.LogManager;
 
+import javax.sound.sampled.Port;
+
 import static spark.Spark.port;
 
 import spark.ModelAndView;
@@ -26,12 +28,12 @@ public class App {
     }
 
       public static void main(String[] args) {
-        Logger logger = LogManager.getLogger(App.class);
+        
 
-        int port = Integer.parseInt(System.getenv("PORT"));
-        port(port);
-        logger.error("Current port number:" + port);
+        Logger logger=LogManager.getLogger(App.class);
+        logger.error("hello world");
 
+        int port=Integer.parseInt(System.getenv("PORT"));
 
         port(getHerokuAssignedPort());
 
