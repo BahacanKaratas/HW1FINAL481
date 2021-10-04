@@ -29,7 +29,6 @@ class AppTest {
         assertFalse(App.isValid_WhatType_And_isLargeEnough(10, 3, 4,arrayx2));
        
     }
-
     //TESTS OF EQUILATERAL TRIANGLE
     public void valid_equilateralTriangle_And_largeEnough(){
         int[] array3={10,5,20};
