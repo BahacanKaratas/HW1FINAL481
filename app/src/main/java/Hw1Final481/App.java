@@ -7,6 +7,9 @@ package Hw1Final481;
 import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.post;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import static spark.Spark.port;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,9 +18,7 @@ import java.util.Map;
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import static spark.Spark.port;
+
 
 public class App {
     public String getGreeting() {
